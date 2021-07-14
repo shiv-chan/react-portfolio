@@ -1,6 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap");
 * {
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Abhaya Libre', serif;
+}
+
+header {
+  background-color: #fcedff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 20px;
+  padding: 1rem;
+  height: 68px;
+}
+
+header a {
+  color: #000;
+  text-decoration: none;
+}
+
+.hamburger {
+  position: fixed;
+  z-index: 3;
+  right: 1.5rem;
+  top: 1rem;
+  height: 28px;
+  width: 28px;
+  cursor: pointer;
+}
+
+.hamburgerLine {
+  position: absolute;
+  right: 0rem;
+  top: 1rem;
+  width: 28px;
+  height: 1px;
+  background-color: #000;
+  -webkit-transition: all 0.55s ease;
+  transition: all 0.55s ease;
+}
+
+.hamburgerLine::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  width: 28px;
+  height: 1px;
+  background-color: #000;
+}
+
+.hamburgerLine::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  right: 0;
+  width: 20px;
+  height: 1px;
+  background-color: #000;
+}
+
+.hamburgerLine.open {
+  -webkit-transform: rotate(540deg);
+          transform: rotate(540deg);
+  background-color: transparent;
+}
+
+.hamburgerLine.open::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.hamburgerLine.open::after {
+  width: 28px;
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  background-attachment: fixed;
+  z-index: 2;
+  background-color: #fcedff;
+  position: absolute;
+  top: -100vh;
+  left: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  border-radius: 50%;
+}
+
+.overlay.open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.55s ease;
+  transition: all 0.55s ease;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  visibility: visible;
+}
+
+.overlay.close {
+  position: fixed;
+  -webkit-transition: all 0.55s ease;
+  transition: all 0.55s ease;
+  visibility: hidden;
+}
+
+.overlay nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  align-items: center;
+  text-align: center;
+}
+
+.overlay nav .menuItem {
+  list-style-type: none;
+  margin-bottom: 15px;
+}
+
+.overlay nav .menuItem a {
+  font-size: 30px;
+  -webkit-transition: all 0.55s ease;
+  transition: all 0.55s ease;
+}
+
+.overlay nav .menuItem a:hover {
+  color: #87288f;
 }

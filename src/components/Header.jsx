@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function Header() {
 	return (
 		<header>
-			<Link to="/">Kaho Shibuya</Link>
+			<Link to="/">KAHO SHIBUYA</Link>
 			<div className="hamburger">
 				<div className="hamburgerLine"></div>
 			</div>
