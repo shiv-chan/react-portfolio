@@ -166,12 +166,40 @@ header a {
   color: #87288f;
 }
 
+footer {
+  background-color: #fcedff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  font-size: 20px;
+  padding: 1rem;
+  width: 100vw;
+  height: 80px;
+  color: #f7b4a7;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .hero {
   background-color: #fcedff;
   position: relative;
   top: 68px;
   text-align: center;
-  padding: 30px 30px 150px 30px;
+  padding: 30px 40px 150px 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -232,6 +260,7 @@ header a {
           align-items: center;
   position: relative;
   z-index: 1;
+  margin-bottom: 5rem;
 }
 
 .card-section a {
@@ -452,5 +481,10 @@ header a {
   }
   .card-section a .card section {
     padding: 2rem;
+  }
+  footer {
+    height: 130px;
+    font-size: 30px;
+    gap: 2rem;
   }
 }
