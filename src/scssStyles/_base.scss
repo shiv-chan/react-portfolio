@@ -15,6 +15,11 @@ $font-color: #000;
 	font-family: 'Abhaya Libre', serif;
 }
 
+html,
+body {
+	overflow-x: hidden;
+}
+
 @mixin flex($direction: row) {
 	display: flex;
 	flex-direction: $direction;

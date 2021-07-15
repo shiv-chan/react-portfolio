@@ -1,6 +1,36 @@
 // larger than 768px (tablet)
-@mixin media-md {
-	@media screen and (min-width: 768px) {
-		@content;
+@media screen and (min-width: 768px) {
+	.hamburger {
+		display: none;
+	}
+
+	.overlay {
+		width: auto;
+		height: auto;
+		visibility: visible;
+		top: initial;
+		left: initial;
+		border-radius: 0;
+		display: block;
+		background-color: transparent;
+
+		&.open,
+		&.close {
+			position: relative;
+			top: initial;
+			left: initial;
+			visibility: visible;
+		}
+
+		nav {
+			.menu {
+				@include flex;
+
+				.menuItem {
+					margin: 0;
+					margin-left: 1.5rem;
+				}
+			}
+		}
 	}
 }
