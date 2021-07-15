@@ -11,32 +11,32 @@ export default function Card({
 }) {
 	return isReady ? (
 		<Link to={`/works/${title}`}>
-			<article>
-				<div className="thumbnail">
-					<img src={thumbnail} alt={title} />
-				</div>
-				<div className="lang-icons">
-					{icons.map((icon) => (
-						<div key={icon} className="icon">
-							<img src={icon} alt={icon} />
-						</div>
-					))}
-				</div>
+			<article className="card">
+				<img className="thumbnail" src={thumbnail} alt={title} />
 				<section>
 					<h1>{title}</h1>
 					<p>{description}</p>
 				</section>
 			</article>
+			<div className="lang-icons">
+				{icons.map((icon) => (
+					<div key={icon} className="icon">
+						<img src={icon} alt={icon} />
+					</div>
+				))}
+			</div>
 		</Link>
 	) : (
-		<article>
-			<div className="dummy-thumnail">
-				<BsImage />
-			</div>
-			<section>
-				<h1>Coming Soon...</h1>
-				<p></p>
-			</section>
-		</article>
+		<Link>
+			<article className="card">
+				<div className="dummy-thumnail">
+					<BsImage />
+				</div>
+				<section>
+					<h1>Coming Soon...</h1>
+					<p></p>
+				</section>
+			</article>
+		</Link>
 	);
 }
