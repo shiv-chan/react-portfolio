@@ -32,10 +32,11 @@ header {
           justify-content: space-between;
   font-size: 20px;
   padding: 1rem;
+  width: 100vw;
   height: 68px;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
+  z-index: 1;
 }
 
 header a {
@@ -44,8 +45,7 @@ header a {
 }
 
 .hamburger {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   z-index: 3;
   right: 1rem;
   top: 1.5rem;
@@ -154,11 +154,10 @@ header a {
 
 .overlay nav .menuItem {
   list-style-type: none;
-  margin-bottom: 15px;
 }
 
 .overlay nav .menuItem a {
-  font-size: 20px;
+  font-size: 12px;
   -webkit-transition: all 0.55s ease;
   transition: all 0.55s ease;
 }
@@ -167,7 +166,63 @@ header a {
   color: #87288f;
 }
 
+.hero {
+  background-color: #fcedff;
+  position: relative;
+  top: 68px;
+  text-align: center;
+  padding: 30px 30px 150px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero h2,
+.hero h1 {
+  font-size: 18px;
+  margin-bottom: 0.5rem;
+}
+
+.hero h1 {
+  color: #87288f;
+  font-size: 20px;
+}
+
+.hero h1 span {
+  display: inline-block;
+}
+
+.hero h1 .underline {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(60%, #f7b4a7), color-stop(90%, #f7b4a7), color-stop(90%, transparent));
+  background: linear-gradient(transparent 60%, #f7b4a7 60%, #f7b4a7 90%, transparent 90%);
+}
+
+.hero section {
+  font-size: 15px;
+  text-align: left;
+  line-height: 25px;
+}
+
+.hero section p > span {
+  background-color: #fff;
+}
+
 @media screen and (min-width: 768px) {
+  header {
+    height: 115px;
+    font-size: 30px;
+    padding: 0 4rem;
+  }
   .hamburger {
     display: none;
   }
@@ -205,5 +260,23 @@ header a {
   .overlay nav .menu .menuItem {
     margin: 0;
     margin-left: 1.5rem;
+  }
+  .overlay nav .menu .menuItem a {
+    font-size: 25px;
+  }
+  .hero {
+    position: relative;
+    top: 115px;
+    padding: 100px 150px 230px 150px;
+  }
+  .hero h2 {
+    font-size: 30px;
+  }
+  .hero h1 {
+    font-size: 50px;
+  }
+  .hero section {
+    font-size: 30px;
+    line-height: 45px;
   }
 }

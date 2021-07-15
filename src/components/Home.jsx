@@ -10,7 +10,6 @@ import SassIcon from '../assets/icons/icons-sass.svg';
 export default function Home() {
 	return (
 		<>
-			<h1>Home Page</h1>
 			<Hero />
 			<Card
 				isReady={true}

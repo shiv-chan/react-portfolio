@@ -1,0 +1,42 @@
+.hero {
+	background-color: $primary-color;
+	position: relative;
+	top: 68px;
+	text-align: center;
+	padding: 30px 30px 150px 30px;
+	@include flex(column);
+
+	h2,
+	h1 {
+		font-size: 18px;
+		margin-bottom: 0.5rem;
+	}
+
+	h1 {
+		color: $secondary-color;
+		font-size: 20px;
+
+		span {
+			display: inline-block;
+		}
+
+		.underline {
+			background: linear-gradient(
+				transparent 60%,
+				$ternary-color 60%,
+				$ternary-color 90%,
+				transparent 90%
+			);
+		}
+	}
+
+	section {
+		font-size: 15px;
+		text-align: left;
+		line-height: 25px;
+
+		p > span {
+			background-color: #fff;
+		}
+	}
+}

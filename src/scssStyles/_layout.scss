@@ -1,5 +1,11 @@
 // larger than 768px (tablet)
 @media screen and (min-width: 768px) {
+	header {
+		height: 115px;
+		font-size: 30px;
+		padding: 0 4rem;
+	}
+
 	.hamburger {
 		display: none;
 	}
@@ -29,8 +35,31 @@
 				.menuItem {
 					margin: 0;
 					margin-left: 1.5rem;
+
+					a {
+						font-size: 25px;
+					}
 				}
 			}
+		}
+	}
+
+	.hero {
+		position: relative;
+		top: 115px;
+		padding: 100px 150px 230px 150px;
+
+		h2 {
+			font-size: 30px;
+		}
+
+		h1 {
+			font-size: 50px;
+		}
+
+		section {
+			font-size: 30px;
+			line-height: 45px;
 		}
 	}
 }

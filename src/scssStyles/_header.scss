@@ -4,9 +4,11 @@ header {
 	justify-content: space-between;
 	font-size: 20px;
 	padding: 1rem;
+	width: 100vw;
 	height: 68px;
-	position: sticky;
+	position: fixed;
 	top: 0;
+	z-index: 1;
 
 	a {
 		color: #000;
@@ -16,7 +18,7 @@ header {
 
 // Menu button
 .hamburger {
-	position: sticky;
+	position: fixed;
 	z-index: 3;
 	right: 1rem;
 	top: 1.5rem;
@@ -106,10 +108,9 @@ header {
 
 		.menuItem {
 			list-style-type: none;
-			margin-bottom: 15px;
 
 			a {
-				font-size: 20px;
+				font-size: 12px;
 				@include transitionEase;
 
 				&:hover {
