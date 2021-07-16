@@ -1,0 +1,122 @@
+header {
+	background-color: $primary-color;
+	@include flex;
+	justify-content: space-between;
+	font-size: 20px;
+	padding: 1rem;
+	width: 100vw;
+	height: 68px;
+	position: fixed;
+	top: 0;
+	z-index: 2;
+
+	a {
+		color: #000;
+		text-decoration: none;
+	}
+}
+
+// Menu button
+.hamburger {
+	position: fixed;
+	z-index: 3;
+	right: 1rem;
+	top: 1.5rem;
+	height: 28px;
+	width: 28px;
+	cursor: pointer;
+
+	&Line {
+		position: absolute;
+		right: 0rem;
+		top: 0.5rem;
+		width: 28px;
+		height: 1px;
+		background-color: $font-color;
+		@include transitionEase;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: -8px;
+			width: 28px;
+			height: 1px;
+			background-color: $font-color;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 8px;
+			right: 0;
+			width: 20px;
+			height: 1px;
+			background-color: $font-color;
+		}
+
+		//change the lines into X
+		&.open {
+			transform: rotate(540deg);
+			background-color: transparent;
+
+			&::before {
+				top: 0;
+				transform: rotate(45deg);
+			}
+
+			&::after {
+				width: 28px;
+				top: 0;
+				transform: rotate(-45deg);
+			}
+		}
+	}
+}
+
+//Menu ovelay
+.overlay {
+	width: 100vw;
+	height: 100vh;
+	background-attachment: fixed;
+	z-index: 2;
+	background-color: rgba($primary-color, 0.95);
+	position: absolute;
+	top: -100vh;
+	left: 100vw;
+	@include flex(column);
+	justify-content: center;
+	visibility: hidden;
+	border-radius: 50%;
+
+	&.open {
+		position: fixed;
+		top: 0;
+		left: 0;
+		@include transitionEase;
+		transform: scale(2);
+		visibility: visible;
+	}
+
+	&.close {
+		position: fixed;
+		@include transitionEase;
+		visibility: hidden;
+	}
+
+	nav {
+		text-align: center;
+
+		.menuItem {
+			list-style-type: none;
+
+			a {
+				font-size: 12px;
+				@include transitionEase;
+
+				&:hover {
+					color: $secondary-color;
+				}
+			}
+		}
+	}
+}

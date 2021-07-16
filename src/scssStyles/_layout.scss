@@ -1,0 +1,114 @@
+// tablet
+@media screen and (min-width: 700px) {
+	.card-section {
+		grid-template-columns: 65vw;
+		grid-auto-rows: 65vw;
+		a {
+			.card {
+				section {
+					h1 {
+						font-size: 20px;
+						margin-bottom: 0.2rem;
+					}
+
+					p {
+						font-size: 18px;
+					}
+				}
+			}
+
+			.lang-icons {
+				margin: 0 1rem;
+				gap: 1rem;
+
+				.icon img {
+					width: 50px;
+					height: 50px;
+				}
+			}
+		}
+	}
+}
+
+// larger than 768px (desktop)
+@media screen and (min-width: 769px) {
+	header {
+		height: 115px;
+		font-size: 30px;
+		padding: 0 4rem;
+	}
+
+	.hamburger {
+		display: none;
+	}
+
+	.overlay {
+		width: auto;
+		height: auto;
+		visibility: visible;
+		top: initial;
+		left: initial;
+		border-radius: 0;
+		display: block;
+		background-color: transparent;
+
+		&.open,
+		&.close {
+			position: relative;
+			top: initial;
+			left: initial;
+			visibility: visible;
+		}
+
+		nav {
+			.menu {
+				@include flex;
+
+				.menuItem {
+					margin: 0;
+					margin-left: 1.5rem;
+
+					a {
+						font-size: 25px;
+					}
+				}
+			}
+		}
+	}
+
+	.hero {
+		position: relative;
+		top: 115px;
+		padding: 100px 150px 230px 150px;
+
+		h2 {
+			font-size: 30px;
+		}
+
+		h1 {
+			font-size: 50px;
+		}
+
+		section {
+			font-size: 30px;
+			line-height: 45px;
+		}
+	}
+
+	.card-section {
+		grid-template-columns: 35vw 35vw;
+		grid-auto-rows: 35vw;
+
+		a .card {
+			section {
+				padding: 2rem;
+			}
+		}
+	}
+
+	footer {
+		height: 130px;
+		font-size: 30px;
+		gap: 2rem;
+	}
+}
