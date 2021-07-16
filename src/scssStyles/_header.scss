@@ -82,18 +82,15 @@ header {
 	background-color: rgba($primary-color, 0.95);
 	position: absolute;
 	top: -100vh;
-	left: 100vw;
 	@include flex(column);
 	justify-content: center;
 	visibility: hidden;
-	border-radius: 50%;
 
 	&.open {
 		position: fixed;
 		top: 0;
 		left: 0;
 		@include transitionEase;
-		transform: scale(2);
 		visibility: visible;
 	}
 
@@ -108,9 +105,9 @@ header {
 
 		.menuItem {
 			list-style-type: none;
+			margin-bottom: 1rem;
 
 			a {
-				font-size: 12px;
 				@include transitionEase;
 
 				&:hover {
