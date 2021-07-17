@@ -1,0 +1,75 @@
+.project-detail {
+	@include flex(column);
+	padding-top: 68px;
+	padding-bottom: 2rem;
+	justify-content: space-between;
+	width: 500px;
+	max-width: 80vw;
+	margin: auto;
+	// height: calc(100vh - 68px);
+
+	h1 {
+		color: $secondary-color;
+		font-size: 30px;
+		text-align: center;
+		margin: 2rem auto;
+	}
+
+	& > p {
+		text-align: left;
+		margin: 0 1rem;
+	}
+
+	.details {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		justify-items: flex-start;
+		gap: 1rem;
+		margin: 2rem;
+
+		h2 {
+			font-size: 15px;
+		}
+
+		.language-tool-list {
+			@include flex;
+			gap: 0.5rem;
+
+			article {
+				@include flex(column);
+
+				img {
+					width: 35px;
+					height: 35px;
+				}
+			}
+		}
+
+		p {
+			font-size: 15px;
+			margin: 0;
+		}
+	}
+
+	& > img {
+		width: 500px;
+		max-width: 80vw;
+		margin-bottom: 0.5rem;
+	}
+
+	.links {
+		align-self: flex-start;
+
+		a {
+			@include flex;
+			justify-content: flex-start;
+			text-decoration: none;
+			color: $font-color;
+
+			svg {
+				margin-right: 0.5rem;
+			}
+		}
+	}
+}
