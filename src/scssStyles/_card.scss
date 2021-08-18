@@ -38,11 +38,13 @@
 				@include flex;
 				font-size: 30px;
 				color: $primary-color;
+				cursor: not-allowed;
 			}
 
 			.dummy-thumnail + section {
 				@include flex(column);
 				color: $ternary-color;
+				cursor: not-allowed;
 			}
 
 			section {
@@ -75,6 +77,64 @@
 				background-color: $primary-color;
 				border-radius: 50%;
 				padding: 5px;
+			}
+		}
+	}
+}
+
+@include smallMobile {
+	.card-section a .card section {
+		h1 {
+			margin-top: 0.2rem;
+			margin-bottom: 0;
+			font-size: 15px;
+		}
+
+		p {
+			font-size: 10px;
+		}
+	}
+}
+
+@include tablet {
+	.card-section {
+		grid-template-columns: 65vw;
+		grid-auto-rows: 65vw;
+		a {
+			.card {
+				section {
+					h1 {
+						font-size: 20px;
+						margin-bottom: 0.2rem;
+					}
+
+					p {
+						font-size: 18px;
+					}
+				}
+			}
+
+			.lang-icons {
+				margin: 0 1rem;
+				gap: 1rem;
+
+				.icon img {
+					width: 50px;
+					height: 50px;
+				}
+			}
+		}
+	}
+}
+
+@include desktop {
+	.card-section {
+		grid-template-columns: 35vw 35vw;
+		grid-auto-rows: 35vw;
+
+		a .card {
+			section {
+				padding: 2rem;
 			}
 		}
 	}

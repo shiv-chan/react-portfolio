@@ -1,7 +1,7 @@
 .hero {
 	background-color: $primary-color;
 	position: relative;
-	top: 68px;
+	top: $header-height;
 	text-align: center;
 	padding: 30px 40px 150px 40px;
 	@include flex(column);
@@ -37,6 +37,27 @@
 
 		p > span {
 			background-color: #fff;
+		}
+	}
+}
+
+@include desktop {
+	.hero {
+		position: relative;
+		top: 115px;
+		padding: 100px 150px 230px 150px;
+
+		h2 {
+			font-size: 30px;
+		}
+
+		h1 {
+			font-size: 50px;
+		}
+
+		section {
+			font-size: 30px;
+			line-height: 45px;
 		}
 	}
 }
