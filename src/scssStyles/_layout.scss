@@ -18,3 +18,10 @@
 		@content;
 	}
 }
+
+// larger than 1440px (super big monitor, external device)
+@mixin bigscreen {
+	@media screen and (min-width: 1441px) {
+		@content;
+	}
+}

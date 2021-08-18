@@ -2,8 +2,7 @@ header {
 	background-color: $primary-color;
 	@include flex;
 	justify-content: space-between;
-	font-size: 20px;
-	padding: 1rem;
+	padding: 1.6rem;
 	width: 100vw;
 	height: $header-height;
 	position: fixed;
@@ -13,6 +12,7 @@ header {
 	a {
 		color: #000;
 		text-decoration: none;
+		font-size: 2.5rem;
 	}
 }
 
@@ -20,17 +20,17 @@ header {
 .hamburger {
 	position: fixed;
 	z-index: 3;
-	right: 1rem;
-	top: 1.5rem;
-	height: 28px;
-	width: 28px;
+	right: 2rem;
+	top: 2.5rem;
+	height: 2.8rem;
+	width: 2.8rem;
 	cursor: pointer;
 
 	&Line {
 		position: absolute;
 		right: 0rem;
 		top: 0.5rem;
-		width: 28px;
+		width: 2.8rem;
 		height: 1px;
 		background-color: $font-color;
 		@include transitionEase;
@@ -38,8 +38,8 @@ header {
 		&::before {
 			content: '';
 			position: absolute;
-			top: -8px;
-			width: 28px;
+			top: -0.8rem;
+			width: 2.8rem;
 			height: 1px;
 			background-color: $font-color;
 		}
@@ -47,9 +47,9 @@ header {
 		&::after {
 			content: '';
 			position: absolute;
-			top: 8px;
+			top: 0.8rem;
 			right: 0;
-			width: 20px;
+			width: 2rem;
 			height: 1px;
 			background-color: $font-color;
 		}
@@ -65,7 +65,7 @@ header {
 			}
 
 			&::after {
-				width: 28px;
+				width: 2.8rem;
 				top: 0;
 				transform: rotate(-45deg);
 			}
@@ -105,9 +105,10 @@ header {
 
 		.menuItem {
 			list-style-type: none;
-			margin-bottom: 1rem;
+			margin-bottom: 2rem;
 
 			a {
+				font-size: 2rem;
 				@include transitionEase;
 
 				&:hover {
@@ -120,9 +121,12 @@ header {
 
 @include desktop {
 	header {
-		height: 115px;
-		font-size: 30px;
+		height: 11.5rem;
 		padding: 0 4rem;
+
+		a {
+			font-size: 3rem;
+		}
 	}
 
 	.hamburger {
@@ -151,12 +155,12 @@ header {
 			.menu {
 				@include flex;
 
-				.menuItem {
+				li.menuItem {
 					margin: 0;
-					margin-left: 1.5rem;
+					margin-left: 2.5rem;
 
 					a {
-						font-size: 25px;
+						font-size: 2.5rem;
 					}
 				}
 			}

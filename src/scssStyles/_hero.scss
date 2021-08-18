@@ -3,18 +3,18 @@
 	position: relative;
 	top: $header-height;
 	text-align: center;
-	padding: 30px 40px 150px 40px;
+	padding: 3rem 4rem 12rem 4rem;
 	@include flex(column);
 
 	h2,
 	h1 {
-		font-size: 18px;
+		font-size: 1.5rem;
 		margin-bottom: 0.5rem;
 	}
 
 	h1 {
 		color: $secondary-color;
-		font-size: 20px;
+		font-size: 3rem;
 
 		span {
 			display: inline-block;
@@ -31,12 +31,29 @@
 	}
 
 	section {
-		font-size: 15px;
+		font-size: 3.5rem;
 		text-align: left;
-		line-height: 25px;
+		line-height: 2rem;
 
 		p > span {
 			background-color: #fff;
+		}
+	}
+}
+
+@include tablet {
+	.hero {
+		h2 {
+			font-size: 3rem;
+		}
+
+		h1 {
+			font-size: 5rem;
+		}
+
+		section {
+			font-size: 4rem;
+			line-height: 2rem;
 		}
 	}
 }
@@ -45,19 +62,19 @@
 	.hero {
 		position: relative;
 		top: 115px;
-		padding: 100px 150px 230px 150px;
+		padding: 10rem 15rem 23rem 15rem;
 
 		h2 {
-			font-size: 30px;
+			font-size: 3.5rem;
 		}
 
 		h1 {
-			font-size: 50px;
+			font-size: 8rem;
 		}
 
 		section {
-			font-size: 30px;
-			line-height: 45px;
+			font-size: 5rem;
+			line-height: 3rem;
 		}
 	}
 }
