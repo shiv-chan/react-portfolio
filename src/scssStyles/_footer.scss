@@ -1,14 +1,14 @@
 footer {
 	background-color: $primary-color;
 	@include flex;
-	gap: 1rem;
-	font-size: 20px;
-	padding: 1rem;
+	gap: 2rem;
+	padding: 1.6rem;
 	width: 100vw;
 	height: $fooer-height;
 	color: $ternary-color;
 
 	a {
+		font-size: 3rem;
 		text-decoration: none;
 		color: inherit;
 	}
@@ -16,8 +16,11 @@ footer {
 
 @include desktop {
 	footer {
-		height: 130px;
-		font-size: 30px;
-		gap: 2rem;
+		height: 13rem;
+		gap: 3.5rem;
+
+		a {
+			font-size: 5rem;
+		}
 	}
 }
