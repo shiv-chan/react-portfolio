@@ -15,7 +15,7 @@ export default function Card({ project }) {
 				</section>
 			</article>
 			<div className="lang-icons">
-				{icons.map((icon) => (
+				{icons.slice(0, 3).map((icon) => (
 					<div key={icon[0]} className="icon">
 						<img src={icon[1]} alt={icon[0]} />
 					</div>

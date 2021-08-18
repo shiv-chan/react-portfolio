@@ -3,7 +3,7 @@ import FigmaIcon from './assets/icons/icons-figma.svg';
 import ReactIcon from './assets/icons/icons-react.svg';
 import SassIcon from './assets/icons/icons-sass.svg';
 
-export default [
+const projectsData = [
 	{
 		title: 'Title',
 		thumbnail:
@@ -107,3 +107,5 @@ export default [
 		source_code: '',
 	},
 ];
+
+export default projectsData;

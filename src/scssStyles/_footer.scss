@@ -5,11 +5,19 @@ footer {
 	font-size: 20px;
 	padding: 1rem;
 	width: 100vw;
-	height: 80px;
+	height: $fooer-height;
 	color: $ternary-color;
 
 	a {
 		text-decoration: none;
 		color: inherit;
+	}
+}
+
+@include desktop {
+	footer {
+		height: 130px;
+		font-size: 30px;
+		gap: 2rem;
 	}
 }

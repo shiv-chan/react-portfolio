@@ -5,7 +5,7 @@ header {
 	font-size: 20px;
 	padding: 1rem;
 	width: 100vw;
-	height: 68px;
+	height: $header-height;
 	position: fixed;
 	top: 0;
 	z-index: 2;
@@ -112,6 +112,52 @@ header {
 
 				&:hover {
 					color: $secondary-color;
+				}
+			}
+		}
+	}
+}
+
+@include desktop {
+	header {
+		height: 115px;
+		font-size: 30px;
+		padding: 0 4rem;
+	}
+
+	.hamburger {
+		display: none;
+	}
+
+	.overlay {
+		width: auto;
+		height: auto;
+		visibility: visible;
+		top: initial;
+		left: initial;
+		border-radius: 0;
+		display: block;
+		background-color: transparent;
+
+		&.open,
+		&.close {
+			position: relative;
+			top: initial;
+			left: initial;
+			visibility: visible;
+		}
+
+		nav {
+			.menu {
+				@include flex;
+
+				.menuItem {
+					margin: 0;
+					margin-left: 1.5rem;
+
+					a {
+						font-size: 25px;
+					}
 				}
 			}
 		}

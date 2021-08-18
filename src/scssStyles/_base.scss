@@ -18,6 +18,7 @@ $font-color: #000;
 html,
 body {
 	overflow-x: hidden;
+	min-height: 100vh;
 }
 
 @mixin flex($direction: row) {
@@ -30,3 +31,6 @@ body {
 @mixin transitionEase {
 	transition: all 0.55s ease;
 }
+
+$header-height: 68px;
+$fooer-height: 80px;
