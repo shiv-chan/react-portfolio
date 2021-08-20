@@ -2,11 +2,18 @@ import React from 'react';
 import { BsImage } from 'react-icons/all';
 import { Link } from 'react-router-dom';
 
+export function convertTitleToParams(title) {
+	const regex = / /g;
+	const lowerCaseTitle = title.toLowerCase();
+	return lowerCaseTitle.replace(regex, '-');
+}
+
 export default function Card({ project }) {
 	const { isReady, title, thumbnail, short_description, icons } = project;
+	const titleParams = convertTitleToParams(title);
 
 	return isReady ? (
-		<Link to={`/works/${title}`}>
+		<Link to={`/works/${titleParams}`}>
 			<article className="card">
 				<img className="thumbnail" src={thumbnail} alt={title} />
 				<section>
