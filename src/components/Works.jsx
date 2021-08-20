@@ -1,5 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { projectsDataContext } from '../context';
+import Card from './Card';
 
 export default function Works() {
-	return <h1>Works Page</h1>;
+	const projectsData = useContext(projectsDataContext);
+
+	return (
+		<div className="works">
+			<h1>WORKS</h1>
+			<section className="card-section">
+				{projectsData.map((project) => (
+					<Card key={project.title} project={project} />
+				))}
+			</section>
+		</div>
+	);
 }

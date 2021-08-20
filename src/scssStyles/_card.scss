@@ -43,8 +43,11 @@
 
 			.dummy-thumnail + section {
 				@include flex(column);
-				color: $ternary-color;
 				cursor: not-allowed;
+
+				h1 {
+					color: $ternary-color;
+				}
 			}
 
 			section {
@@ -53,6 +56,7 @@
 				padding: 3rem 2rem;
 
 				h1 {
+					color: $secondary-color;
 					font-size: 1.5rem;
 					margin-bottom: 0.5rem;
 				}

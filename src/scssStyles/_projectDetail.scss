@@ -1,4 +1,5 @@
-.project-detail {
+.project-detail,
+.works {
 	@include flex(column);
 	padding-top: $header-height;
 	padding-bottom: 3rem;
@@ -9,7 +10,7 @@
 	margin: auto;
 	gap: 2rem;
 
-	h1 {
+	& > h1 {
 		color: $secondary-color;
 		font-size: 30px;
 		text-align: center;
@@ -88,11 +89,12 @@
 }
 
 @include desktop {
-	.project-detail {
+	.project-detail,
+	.works {
 		padding-top: 115px;
 		width: 800px;
 
-		h1 {
+		& > h1 {
 			font-size: 5rem;
 			margin: 6rem auto 4rem;
 		}
