@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { projectsDataContext } from '../context';
 import { useParams } from 'react-router';
-import projectsData from '../projectsData';
 import { BiLinkExternal, FaGithub } from 'react-icons/all';
+import { convertTitleToParams } from './Card';
 
 export default function ProjectDetail() {
+	const projectsData = useContext(projectsDataContext);
 	const { projectName } = useParams();
-	const project = projectsData.find((project) => project.title === projectName);
+	const project = projectsData.find(
+		(project) => convertTitleToParams(project.title) === projectName
+	);
 
 	return (
 		<div className="project-detail">
