@@ -1,4 +1,4 @@
-## Portfolio Website
+# Portfolio Website
 A website that showcases the projects and introduces myself, bulit with React and SCSS.
 
 ## Mockup
