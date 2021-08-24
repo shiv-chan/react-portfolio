@@ -27,10 +27,10 @@ function App() {
 			<ScrollToTop />
 			<Header />
 			<Switch>
-				<Route exact path="/" component={Home} />
 				<Route exact path="/works" component={Works} />
 				<Route path="/works/:projectName" component={ProjectDetail} />
 				<Route path="/about" component={About} />
+				<Route path="/" component={Home} />
 			</Switch>
 			<Footer />
 		</Router>
