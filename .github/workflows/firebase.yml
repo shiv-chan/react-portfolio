@@ -25,7 +25,6 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
     - run: npm install -g yarn
     - name: yarn install, build and test
       run: |
@@ -48,7 +47,7 @@ jobs:
         with:
           name: build
           path: build
-      - name: Deploy ti Firebase
+      - name: Deploy to Firebase
         uses: w9jds/firebase-action@main
         with:
           args: deploy --only hosting
