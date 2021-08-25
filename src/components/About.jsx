@@ -33,7 +33,7 @@ export default function About() {
 					<p>
 						As a professional, she likes to have a clear vision or path to where
 						the team/the company is aiming for, to set a goal, and to know the
-						consequences of what I do.
+						consequences of what she does.
 						<br />
 						She needs to focus on her tasks on her own sometimes, however, she’s
 						always open to discuss or share her thoughts, opinions or even her
