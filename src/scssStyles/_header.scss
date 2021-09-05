@@ -9,6 +9,10 @@ header {
 	top: 0;
 	z-index: 2;
 
+	& > a:first-of-type {
+		color: $secondary-color;
+	}
+
 	a {
 		color: #000;
 		text-decoration: none;

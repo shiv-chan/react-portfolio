@@ -14,7 +14,7 @@ export default function ProjectDetail() {
 	return (
 		<div className="project-detail">
 			<h1>{project.title}</h1>
-			<p>{project.long_description}</p>
+			{project.long_description()}
 			<section className="details">
 				<h2>Language & Tool</h2>
 				<div className="language-tool-list">
@@ -33,10 +33,14 @@ export default function ProjectDetail() {
 			<article>
 				<img src={project.image} alt={project.title} />
 				<div className="links">
-					<a href={project.website} alt="website">
-						<BiLinkExternal />
-						Website
-					</a>
+					{project.website === '' ? (
+						''
+					) : (
+						<a href={project.website} alt="website">
+							<BiLinkExternal />
+							Website
+						</a>
+					)}
 					<a href={project.source_code} alt="source-code">
 						<FaGithub />
 						Source code
