@@ -3,14 +3,16 @@ import FigmaIcon from './assets/icons/icons-figma.svg';
 import ReactIcon from './assets/icons/icons-react.svg';
 import SassIcon from './assets/icons/icons-sass.svg';
 import ReduxIcon from './assets/icons/icons-redux.svg';
+import FirebaseIcon from './assets/icons/icons-firebase.svg';
 
 // images
 import TodoDemo from './assets/react-todo-app-demo.gif';
+import TodoThumbnail from './assets/react-todo-app-tn.jpg';
 
 const projectsData = [
 	{
 		title: 'Todo App',
-		thumbnail: TodoDemo,
+		thumbnail: TodoThumbnail,
 		icons: [
 			['React', ReactIcon],
 			['Redux', ReduxIcon],
@@ -92,25 +94,74 @@ const projectsData = [
 		source_code: 'https://github.com/shiv-chan/react-todo-app',
 	},
 	{
-		title: 'Title 2',
+		title: 'Portfolio Website',
 		thumbnail:
-			'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
+			'https://user-images.githubusercontent.com/51708229/132110667-7a129171-ee3f-4cd0-815d-bba3c2a7e2d9.png',
 		icons: [
-			['Figma', FigmaIcon],
 			['React', ReactIcon],
 			['Sass', SassIcon],
+			['Firebase', FirebaseIcon],
+			['Figma', FigmaIcon],
 		],
 		short_description:
-			'Amet consequat id quis dolor adipisicing minim enim ut magna exercitation ipsum.',
-		long_description:
-			'Amet consequat id quis dolor adipisicing minim enim ut magna exercitation ipsum.',
+			"A website that showcases the projects and introduces myself, bulit with React and SCSS. I'm using Firebase to host the website.",
+		long_description: function () {
+			return (
+				<p>
+					This is a website that showcases the projects and introduces myself,
+					bulit with React and SCSS.
+					<br />
+					I'm using Firebase to host the website.
+					<br />
+					I designed a whole website myself with Figma.
+					<br />
+					<br />
+					This project was a part of assignments in my college. I already had my
+					portfolio site buit with HTML, CSS, and Vanilla JavaScript, but I
+					wanted to tried to create the one with React which I just started to
+					learn around then, especially <code>context</code> API and{' '}
+					<code>react router</code>. I started this process with by using the{' '}
+					<code>create-react-app</code> boilerplate, then adding{' '}
+					<code>react-router-dom</code>. Also, I installed <code>sass</code> and{' '}
+					<code>node-sass</code> to utilize SASS for styling.
+					<br />I wanted to update my portfolio site easily, especially "Work"
+					section , so I created <code>projectsData.js</code> which has an array
+					of all my projects' information. Once I update the array in the file,
+					"Work" section will be updated. This project is also for expeliment to
+					use <code>context</code> API, so I passed the data to all components
+					as <code>context</code>.<br />
+					<br />I learned some new things through this project.
+					<ol>
+						<li>
+							How to handle parameters with <code>useParams()</code> and show
+							each pages.
+							<br />I liked that I implement the function{' '}
+							<code>convertTitleToParams</code> which conevrts the project title
+							string to the parameter formed(hyphenated) string.
+							<br />
+							e.g.) Todo App -&gt; todo-app
+						</li>
+						<li>I need to import images to use them in JSX.</li>
+						<li>
+							How to host the website with Firebase.
+							<br />
+							This is the most challenging thing to finish this project. I
+							should have had a knowladge of yml to configure the setting of
+							Firebase Hosting. I connected Firebase to GitHub, so everytime I
+							commit to <code>main</code> it will be build and deploy
+							automatically. It's easy to update the website.
+						</li>
+					</ol>
+				</p>
+			);
+		},
 		isReady: true,
-		period: '3 months',
-		responsibilities: 'Design, Front-end(The entire page)',
+		period: '3 weeks',
+		responsibilities: 'Design, Front-end',
 		image:
-			'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
-		website: '',
-		source_code: '',
+			'https://user-images.githubusercontent.com/51708229/132110667-7a129171-ee3f-4cd0-815d-bba3c2a7e2d9.png',
+		website: 'https://kahoshibuya.dev',
+		source_code: 'https://github.com/shiv-chan/react-portfolio',
 	},
 	{
 		title: 'Title 3',
