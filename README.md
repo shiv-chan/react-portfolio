@@ -29,7 +29,7 @@ This project was a part of assignments in my college. I already had my portfolio
 
 I started this process with by using the `create-react-app` boilerplate, then adding `react-router-dom`. Also, I installed `sass` and `node-sass` to utilize SASS for styling.<br/>
 I wanted to update my portfolio site, especially "Work" section easily, so I created `projectsData.js` which has an array of all my projects' information. Once I update the array in the file, "Work" section will be updated.<br/>
-This project is also for experiment to use `context` API, so I passed the data to all components as `context`.
+This project is also an experiment to use `context` API, so I passed the data to all components as `context`.
 
 I learned some new things through this project.
 
