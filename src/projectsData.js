@@ -87,14 +87,7 @@ const projectsData = [
 							Weather API provides with weather icon code, so I created the
 							function <code>iconClassName</code> that can generate a class name
 							based on the icon code. Then, passing the class name to the
-							container wrapper in <code>App.js</code> like the following:
-							<br />
-							{/* <code>
-								{
-									// eslint-disable-next-line no-template-curly-in-string
-									"className = { `container ${ weather !== null ? iconClassName(weather.weather[0].icon) : '' } `}"
-								}
-							</code> */}
+							container wrapper in <code>App.js</code>.
 							<br />
 							Also, created the scss file to style the background based on each
 							class name.
