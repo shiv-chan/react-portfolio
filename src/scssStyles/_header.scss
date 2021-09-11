@@ -10,7 +10,14 @@ header {
 	z-index: 2;
 
 	& > a:first-of-type {
+		display: flex;
+		align-items: center;
 		color: $secondary-color;
+		img {
+			width: 2.5rem;
+			height: 2.5rem;
+			margin-right: 0.5rem;
+		}
 	}
 
 	a {
