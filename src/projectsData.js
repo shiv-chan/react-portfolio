@@ -57,10 +57,17 @@ const projectsData = [
 					</p>
 					<p>
 						Building a weather app was one of my assignments in college. First,
-						I built the one with vanilla JavaScript. As I learned React, I
-						started to convert the project into the one with React. At that
-						time, (even now) it's hard for me to tell when to use either React
-						context or Redux.
+						I built{' '}
+						<a
+							href="https://github.com/shiv-chan/WMAP/tree/main/Web%20Development%20II/Midterm%20Project"
+							alt="first-weather-app"
+						>
+							the one
+						</a>{' '}
+						with vanilla JavaScript. As I learned React, I started to convert
+						the project into the one with React. At that time, (even now) it's
+						hard for me to tell when to use either React <code>context</code> or
+						Redux.
 					</p>
 					<p>
 						This one is a kind of an experiment project to see how the code
@@ -406,8 +413,8 @@ const projectsData = [
 					<img src={PuppyTimeDetails} alt="puppytime-desktop" />
 					<p>
 						For mobile device, I designed and coded the fixed icons of phone and
-						text. When the user taps these icons a phone or sms application will
-						start. Thefore, I hid the phone number from the header.
+						text. When the user taps these icons a phone or an sms application
+						will start. Therefore, I hid the phone number from the header.
 						<br />I implemented these with a custom CSS.
 					</p>
 					<img src={PuppyTimeMobile} alt="puppytime-mobile" />
