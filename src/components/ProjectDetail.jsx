@@ -25,10 +25,14 @@ export default function ProjectDetail() {
 							Website
 						</a>
 					)}
-					<a href={project.source_code} alt="source-code">
-						<FaGithub />
-						Source code
-					</a>
+					{project.source_code === '' ? (
+						''
+					) : (
+						<a href={project.source_code} alt="website">
+							<FaGithub />
+							Source code
+						</a>
+					)}
 				</div>
 			</article>
 			<section className="details">

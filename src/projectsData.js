@@ -5,12 +5,25 @@ import SassIcon from './assets/icons/icons-sass.svg';
 import ReduxIcon from './assets/icons/icons-redux.svg';
 import FirebaseIcon from './assets/icons/icons-firebase.svg';
 import OpenWeather from './assets/icons/openweather.png';
+import Squarespace from './assets/icons/icons-squarespace.svg';
+import Html from './assets/icons/icons-html5.svg';
+import Css from './assets/icons/icons-css3.svg';
+import JavaScript from './assets/icons/icons-javascript.svg';
+import Yelp from './assets/icons/icons-yelp.svg';
+import GoogleMap from './assets/icons/icons-google-maps.svg';
 
 // images
 import TodoDemo from './assets/react-todo-app-demo.gif';
-import TodoThumbnail from './assets/react-todo-app-tn.jpg';
+import TodoThumbnail from './assets/react-todo-app-tn.png';
 import WeatherDemo from './assets/weather-app-demo.gif';
-import WeatherThumbnail from './assets/weather-app-tn.jpg';
+import WeatherThumbnail from './assets/weather-app-tn.png';
+import PortfolioThumbnail from './assets/portfolio-tn.png';
+import PuppyTimeThumbnail from './assets/puppytime-tn.gif';
+import PuppyTimeTop from './assets/puppytime-top.gif';
+import PuppyTimeDetails from './assets/puppytime-details.png';
+import PuppyTimeMobile from './assets/puppytime-mobile-demo.gif';
+import BubbleTeaHuntThumbnail from './assets/bubble-tea-hunt-tn.png';
+import BubbleTeaHuntDemo from './assets/bubble-tea-hunt-demo.gif';
 
 const projectsData = [
 	{
@@ -27,9 +40,7 @@ const projectsData = [
 		long_description: function () {
 			return (
 				<>
-					<p>
-						This is a weather applicaiton built with React, Redux, and SCSS.
-					</p>
+					<p>A weather applicaiton built with React, Redux, and SCSS.</p>
 					<p>
 						This app fetches the weather data using{' '}
 						<a href="https://openweathermap.org/api" alt="open-weather">
@@ -209,8 +220,7 @@ const projectsData = [
 	},
 	{
 		title: 'Portfolio Website',
-		thumbnail:
-			'https://user-images.githubusercontent.com/51708229/132110667-7a129171-ee3f-4cd0-815d-bba3c2a7e2d9.png',
+		thumbnail: PortfolioThumbnail,
 		icons: [
 			['React', ReactIcon],
 			['Sass', SassIcon],
@@ -282,60 +292,153 @@ const projectsData = [
 		source_code: 'https://github.com/shiv-chan/react-portfolio',
 	},
 	{
-		title: 'Title 3',
-		thumbnail:
-			'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
+		title: 'Bubble Tea Hunt',
+		thumbnail: BubbleTeaHuntThumbnail,
 		icons: [
+			['JavaScript', JavaScript],
+			['Yelp Fusion', Yelp],
+			['Maps API', GoogleMap],
+			['CSS', Css],
+			['HTML', Html],
+		],
+
+		short_description:
+			'You can search bubble tea places on Yelp by location. This app also shows the places on Google Maps.',
+		long_description: function () {
+			return (
+				<>
+					<p>This personal project was a practice to manipulate APIs.</p>
+					<p>
+						With Yelp Fusion API, this application fetches and shows all bubble
+						tea places' information on Yelp besed on the location that the user
+						inputs on a search bar.
+						<br />
+						Also, the information is passed to <code>map.js</code>, which
+						creates Google Maps and populates pins on the map. Therefore, the
+						user can see the bubble tea places' location on the map.
+						<br />
+						*Since I used this API for development purposes, the watermark is on
+						the map.
+					</p>
+					<p>The followings are main things I learned through this project.</p>
+					<ol>
+						<li>
+							Fetching the data with HTTP headers.
+							<br />
+							The most APIs that I'd had till this project lets us append an API
+							key as a parameter, but in this case I needed to pass the API key
+							with HTTP headers. Therefore, I learned how to config that.
+							<br />I also could have a chance to learn how to hide the
+							confidential information when pushing the code to GitHub.
+						</li>
+						<li>
+							Referring to the documentation and implementing the new feature.
+							<br />I came up with an idea to show all bubble tea places on the
+							map while buildin this app. I researched how to make it happen and
+							landed the Google Maps API. I wasn't really comfortable with
+							reading the documentation but with some examples on the document I
+							played with it and tried to manipulate it as I wanted on this app.
+							<br />
+							Not only Google Maps but also a loading spinner or an infinite
+							loop images were the ones that I could implemented based on sample
+							codes shared online.
+						</li>
+					</ol>
+				</>
+			);
+		},
+		isReady: true,
+		period: '2 weeks',
+		responsibilities: 'Design, Front-end',
+		image: BubbleTeaHuntDemo,
+		website: '',
+		source_code: 'https://github.com/shiv-chan/bubble-tea-hunt',
+	},
+	{
+		title: 'Puppy Time Vancouver Website',
+		thumbnail: PuppyTimeThumbnail,
+		icons: [
+			['Squarespace', Squarespace],
+			['CSS', Css],
+			['JavaScript', JavaScript],
+			['HTML', Html],
 			['Figma', FigmaIcon],
-			['React', ReactIcon],
-			['Sass', SassIcon],
 		],
 		short_description:
-			'Amet consequat id quis dolor adipisicing minim enim ut magna exercitation ipsum.',
-		long_description:
-			'Amet consequat id quis dolor adipisicing minim enim ut magna exercitation ipsum.',
-		isReady: false,
-		period: '3 months',
-		responsibilities: 'Design, Front-end(The entire page)',
-		image:
-			'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
-		website: '',
+			'A website of Puppy Time Vancouver, who is a professional animal care service, built with Squarespace.',
+		long_description: function () {
+			return (
+				<>
+					<p>
+						Puppy Time Vancouver is a professional animal care based in the West
+						End/Coal Harbour of Vancouver, BC, Canada.
+					</p>
+					<p>
+						Since they did not have their own website, I designed and built the
+						website from scratch discussing with my client and their marketing
+						team.
+					</p>
+					<p>
+						In order to enable my client to maintain the website on their own,
+						we decided to build this with CMS, which is familiar to my client,
+						Squarespace.
+					</p>
+					<p>
+						The landing page looks like a one-page website, but the information
+						on each section is limited on purpose.
+						<br />
+						On the landing page, when each item on the header is clicked the
+						page will be scrolled down to the corresponding section of the page.
+						On the other hand, on the other pages than the landing page each
+						item on the header leads the user to each separeted page.
+						<br />I wrote a custom JavaScript to implement this function.
+					</p>
+					<p>
+						In the figure below, those two images on the left are the landing
+						page as a whole. You can see the "Services" section under the hero
+						image.
+						<br />
+						The image on the right is the separeted page of "Services". When the
+						user clicks each service or "Learn More" button, it leads the user
+						to the separated page. The rest of sections work the same way.(A
+						laptop/desktop version only)
+					</p>
+					<img src={PuppyTimeDetails} alt="puppytime-desktop" />
+					<p>
+						For mobile device, I designed and coded the fixed icons of phone and
+						text. When the user taps these icons a phone or sms application will
+						start. Thefore, I hid the phone number from the header.
+						<br />I implemented these with a custom CSS.
+					</p>
+					<img src={PuppyTimeMobile} alt="puppytime-mobile" />
+				</>
+			);
+		},
+		isReady: true,
+		period: '6 months',
+		responsibilities: 'Design, Coding',
+		image: PuppyTimeTop,
+		website: 'https://www.puppytimevancouver.com/',
 		source_code: '',
 	},
 	{
-		title: 'Title 4',
+		title: 'Sample',
 		thumbnail:
 			'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
 		icons: [
-			['Figma', FigmaIcon],
-			['React', ReactIcon],
-			['Sass', SassIcon],
+			['JavaScript', JavaScript],
+			['CSS', Css],
+			['HTML', Html],
 		],
 
 		short_description:
 			'Amet consequat id quis dolor adipisicing minim enim ut magna exercitation ipsum.',
-		long_description:
-			'Amet consequat id quis dolor adipisicing minim enim ut magna exercitation ipsum.',
+		long_description: function () {
+			return <p>description</p>;
+		},
 		isReady: false,
-		period: '3 months',
-		responsibilities: 'Design, Front-end(The entire page)',
-		image:
-			'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
-		website: '',
-		source_code: '',
-	},
-	{
-		title: 'Title 5',
-		thumbnail:
-			'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
-		icons: [FigmaIcon, ReactIcon, SassIcon],
-		short_description:
-			'Amet consequat id quis dolor adipisicing minim enim ut magna exercitation ipsum.',
-		long_description:
-			'Amet consequat id quis dolor adipisicing minim enim ut magna exercitation ipsum.',
-		isReady: false,
-		period: '3 months',
-		responsibilities: 'Design, Front-end(The entire page)',
+		period: '2 weeks',
+		responsibilities: 'Design, Front-end',
 		image:
 			'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
 		website: '',
