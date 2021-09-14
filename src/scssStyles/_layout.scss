@@ -1,27 +1,27 @@
 // smaller than mobile(s)
 @mixin smallMobile {
-	@media screen and (max-width: 370px) {
+	@media screen and (max-width: 320px) {
 		@content;
 	}
 }
 
 // tablet
 @mixin tablet {
-	@media screen and (min-width: 700px) {
+	@media screen and (min-width: 768px) {
 		@content;
 	}
 }
 
 // larger than 768px (desktop)
 @mixin desktop {
-	@media screen and (min-width: 769px) {
+	@media screen and (min-width: 1024px) {
 		@content;
 	}
 }
 
 // larger than 1440px (super big monitor, external device)
 @mixin bigscreen {
-	@media screen and (min-width: 1441px) {
+	@media screen and (min-width: 1440px) {
 		@content;
 	}
 }

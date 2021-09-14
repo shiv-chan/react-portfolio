@@ -11,6 +11,7 @@ import ProjectDetail from './components/ProjectDetail';
 import About from './components/About';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import WIP from './components/WIP';
 
 function ScrollToTop() {
 	const { pathname } = useLocation();
@@ -30,6 +31,7 @@ function App() {
 				<Route exact path="/works" component={Works} />
 				<Route path="/works/:projectName" component={ProjectDetail} />
 				<Route path="/about" component={About} />
+				<Route path="/resume" component={WIP} />
 				<Route path="/" component={Home} />
 			</Switch>
 			<Footer />

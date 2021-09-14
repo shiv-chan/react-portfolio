@@ -1,6 +1,7 @@
 .project-detail,
 .works,
-.about {
+.about,
+.wip {
 	@include flex(column);
 	padding-top: $header-height;
 	padding-bottom: 3rem;
@@ -22,18 +23,67 @@
 		font-size: 2rem;
 		text-align: left;
 		margin: 0 1rem;
+
+		a {
+			font-size: inherit;
+			color: $secondary-color;
+			text-decoration: none;
+		}
+	}
+}
+
+.project-detail {
+	.project-description {
+		margin: 2rem auto 5rem;
+
+		p {
+			font-size: 1.8rem;
+			text-align: left;
+			margin: 1rem;
+		}
+
+		a {
+			font-size: inherit;
+			color: $secondary-color;
+			text-decoration: none;
+		}
+
+		code,
+		pre {
+			font-family: monospace;
+			font-size: 1.3rem;
+			font-weight: lighter;
+			padding: 0 0.4rem;
+			background-color: rgb(216, 220, 227);
+			border-radius: 5px;
+		}
+
+		ol {
+			margin-top: 4rem;
+			margin-left: 2rem;
+
+			li {
+				font-size: 1.8rem;
+				margin-top: 1.5rem;
+			}
+		}
+
+		img {
+			width: 100%;
+			margin: 2rem auto;
+		}
 	}
 
 	.details {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr 2fr;
 		align-items: center;
 		justify-items: flex-start;
 		gap: 1rem;
-		margin: 2rem;
+		margin: 2rem 0;
 
-		h2 {
-			font-size: 15px;
+		.details-head {
+			font-size: 1.8rem;
 		}
 
 		.language-tool-list {
@@ -43,18 +93,22 @@
 			grid-auto-rows: auto;
 			gap: 0.5rem;
 
-			article {
+			.language-icon {
 				@include flex(column);
 
 				img {
 					width: 3.5rem;
 					height: 3.5rem;
 				}
+
+				p {
+					font-size: 1.3rem;
+				}
 			}
 		}
 
-		p {
-			font-size: 1.5rem;
+		.details-item {
+			font-size: 1.8rem;
 			margin: 0;
 		}
 	}
@@ -66,14 +120,18 @@
 	}
 
 	.links {
+		@include flex;
+		justify-content: flex-start;
+		gap: 2rem;
 		align-self: flex-start;
+		margin-bottom: 2rem;
 
 		a {
 			@include flex;
 			justify-content: flex-start;
 			text-decoration: none;
-			color: $font-color;
-			font-size: 1.5rem;
+			color: $secondary-color;
+			font-size: 2rem;
 			margin-bottom: 0.5rem;
 
 			&:hover {
@@ -81,9 +139,81 @@
 			}
 
 			svg {
-				width: 1.5rem;
-				height: 1.5rem;
+				width: 2rem;
+				height: 2rem;
 				margin-right: 0.5rem;
+			}
+		}
+	}
+}
+
+@include smallMobile {
+	.project-detail {
+		.project-description {
+			p {
+				font-size: 1.5rem;
+			}
+
+			code,
+			pre {
+				font-size: 1rem;
+			}
+
+			ol {
+				li {
+					font-size: 1.5rem;
+				}
+			}
+		}
+
+		.details {
+			.details-head {
+				font-size: 1.5rem;
+			}
+
+			.details-item {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
+
+@include tablet {
+	.project-detail {
+		.project-description {
+			p {
+				font-size: 2rem;
+			}
+
+			code,
+			pre {
+				font-size: 1.5rem;
+			}
+
+			ol {
+				li {
+					font-size: 2rem;
+				}
+			}
+		}
+
+		.details {
+			gap: 1rem 3rem;
+
+			.details-head {
+				font-size: 2rem;
+			}
+
+			.language-tool-list {
+				.language-icon {
+					p {
+						font-size: 1.8rem;
+					}
+				}
+			}
+
+			.details-item {
+				font-size: 2rem;
 			}
 		}
 	}
@@ -92,49 +222,72 @@
 @include desktop {
 	.project-detail,
 	.works,
-	.about {
+	.about,
+	.wip {
 		padding-top: 115px;
 		width: 800px;
+		min-height: calc(100vh - 130px);
 
 		& > h1 {
 			font-size: 5rem;
 			margin: 6rem auto 4rem;
 		}
+	}
 
-		p {
-			font-size: 3rem;
-			margin: 0 2rem;
+	.project-detail {
+		padding-top: 115px;
+		width: 800px;
+
+		.project-description {
+			p {
+				font-size: 2.5rem;
+				margin-top: 2rem;
+			}
+
+			code {
+				font-size: 2rem;
+			}
+
+			ol li {
+				font-size: 2.5rem;
+			}
 		}
 
 		.details {
-			margin: 5rem;
-			gap: 2rem;
+			margin: 4rem 0;
+			gap: 2rem 6rem;
 
-			h2 {
-				font-size: 3rem;
+			.details-head {
+				font-size: 2.5rem;
 			}
 
 			.language-tool-list {
 				gap: 1.5rem;
 
-				article img {
-					width: 5rem;
-					height: 5rem;
+				.language-icon {
+					img {
+						width: 5rem;
+						height: 5rem;
+					}
+
+					p {
+						font-size: 2.5rem;
+					}
 				}
 			}
 
-			p {
-				font-size: 3rem;
+			.details-item {
+				font-size: 2.5rem;
 			}
 		}
 
 		& article > img {
 			width: 100%;
-			margin-bottom: 1rem;
 		}
 
 		.links {
 			a {
+				color: $font-color;
 				font-size: 2.5rem;
 
 				svg {

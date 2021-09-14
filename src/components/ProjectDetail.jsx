@@ -14,35 +14,55 @@ export default function ProjectDetail() {
 	return (
 		<div className="project-detail">
 			<h1>{project.title}</h1>
-			<p>{project.long_description}</p>
+			<article>
+				<img src={project.image} alt={project.title} />
+				<div className="links">
+					{project.website === '' ? (
+						''
+					) : (
+						<a
+							href={project.website}
+							alt="website"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<BiLinkExternal />
+							Website
+						</a>
+					)}
+					{project.source_code === '' ? (
+						''
+					) : (
+						<a
+							href={project.source_code}
+							alt="website"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<FaGithub />
+							Source code
+						</a>
+					)}
+				</div>
+			</article>
 			<section className="details">
-				<h2>Language & Tool</h2>
+				<h2 className="details-head">Language & Tool</h2>
 				<div className="language-tool-list">
 					{project.icons.map((icon) => (
-						<article>
+						<article className="language-icon">
 							<img src={icon[1]} alt={icon[0]} />
 							<p>{icon[0]}</p>
 						</article>
 					))}
 				</div>
-				<h2>Production Period</h2>
-				<p>{project.period}</p>
-				<h2>Responsibilities</h2>
-				<p>{project.responsibilities}</p>
+				<h2 className="details-head">Production Period</h2>
+				<p className="details-item">{project.period}</p>
+				<h2 className="details-head">Responsibilities</h2>
+				<p className="details-item">{project.responsibilities}</p>
 			</section>
-			<article>
-				<img src={project.image} alt={project.title} />
-				<div className="links">
-					<a href={project.website} alt="website">
-						<BiLinkExternal />
-						Website
-					</a>
-					<a href={project.source_code} alt="source-code">
-						<FaGithub />
-						Source code
-					</a>
-				</div>
-			</article>
+			<section className="project-description">
+				{project.long_description()}
+			</section>
 		</div>
 	);
 }

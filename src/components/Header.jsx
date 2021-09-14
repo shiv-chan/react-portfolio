@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Icon from '../assets/icons/portfolio-icon.png';
 
 export default function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,7 +11,10 @@ export default function Header() {
 
 	return (
 		<header>
-			<Link to="/">KAHO SHIBUYA</Link>
+			<Link to="/">
+				<img src={Icon} alt="icon" />
+				KAHO SHIBUYA
+			</Link>
 			<div className="hamburger" onClick={handleClick}>
 				<div className={`hamburgerLine ${isMenuOpen ? 'open' : ''}`}></div>
 			</div>
@@ -26,8 +30,8 @@ export default function Header() {
 						<li className="menuItem" onClick={handleClick}>
 							<a
 								href="/resume"
-								download
-								style={{ 'pointer-events': 'none', cursor: 'not-allowed' }}
+								// download
+								style={{ cursor: 'not-allowed', color: 'lightgrey' }}
 							>
 								RESUME
 							</a>

@@ -2,18 +2,29 @@ header {
 	background-color: $primary-color;
 	@include flex;
 	justify-content: space-between;
-	padding: 1.6rem;
+	padding: 2rem;
 	width: 100vw;
 	height: $header-height;
 	position: fixed;
 	top: 0;
 	z-index: 2;
 
+	& > a:first-of-type {
+		display: flex;
+		align-items: center;
+		color: $secondary-color;
+		img {
+			width: 2.5rem;
+			height: 2.5rem;
+			margin-right: 0.5rem;
+		}
+	}
+
 	a {
 		color: #000;
 		text-decoration: none;
 		font-size: 2.5rem;
-		margin-left: 2rem;
+		outline: none;
 	}
 }
 
@@ -123,7 +134,7 @@ header {
 @include desktop {
 	header {
 		height: 11.5rem;
-		padding: 0 4rem;
+		padding: 0 7rem;
 
 		a {
 			font-size: 3rem;
