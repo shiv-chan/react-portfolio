@@ -235,13 +235,13 @@ const projectsData = [
 			['Figma', FigmaIcon],
 		],
 		short_description:
-			"A website that showcases the projects and introduces myself, bulit with React and SCSS. I'm using Firebase to host the website.",
+			"A website that showcases the projects and introduces myself, built with React and SCSS. I'm using Firebase to host the website.",
 		long_description: function () {
 			return (
 				<>
 					<p>
 						This is a website that showcases the projects and introduces myself,
-						bulit with React and SCSS.
+						built with React and SCSS.
 						<br />
 						I'm using Firebase to host the website.
 						<br />I designed a whole website myself with Figma.

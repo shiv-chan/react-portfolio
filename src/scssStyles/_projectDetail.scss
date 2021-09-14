@@ -1,6 +1,7 @@
 .project-detail,
 .works,
-.about {
+.about,
+.wip {
 	@include flex(column);
 	padding-top: $header-height;
 	padding-bottom: 3rem;
@@ -221,9 +222,11 @@
 @include desktop {
 	.project-detail,
 	.works,
-	.about {
+	.about,
+	.wip {
 		padding-top: 115px;
 		width: 800px;
+		min-height: calc(100vh - 130px);
 
 		& > h1 {
 			font-size: 5rem;

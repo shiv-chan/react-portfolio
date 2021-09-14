@@ -30,8 +30,8 @@ export default function Header() {
 						<li className="menuItem" onClick={handleClick}>
 							<a
 								href="/resume"
-								download
-								style={{ 'pointer-events': 'none', cursor: 'not-allowed' }}
+								// download
+								style={{ cursor: 'not-allowed', color: 'lightgrey' }}
 							>
 								RESUME
 							</a>
