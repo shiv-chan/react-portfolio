@@ -20,7 +20,12 @@ export default function ProjectDetail() {
 					{project.website === '' ? (
 						''
 					) : (
-						<a href={project.website} alt="website">
+						<a
+							href={project.website}
+							alt="website"
+							target="_blank"
+							rel="noreferrer"
+						>
 							<BiLinkExternal />
 							Website
 						</a>
@@ -28,7 +33,12 @@ export default function ProjectDetail() {
 					{project.source_code === '' ? (
 						''
 					) : (
-						<a href={project.source_code} alt="website">
+						<a
+							href={project.source_code}
+							alt="website"
+							target="_blank"
+							rel="noreferrer"
+						>
 							<FaGithub />
 							Source code
 						</a>

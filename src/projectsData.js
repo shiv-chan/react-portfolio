@@ -43,7 +43,12 @@ const projectsData = [
 					<p>A weather applicaiton built with React, Redux, and SCSS.</p>
 					<p>
 						This app fetches the weather data using{' '}
-						<a href="https://openweathermap.org/api" alt="open-weather">
+						<a
+							href="https://openweathermap.org/api"
+							alt="open-weather"
+							target="_blank"
+							rel="noreferrer"
+						>
 							Weather API
 						</a>{' '}
 						by OpenWeather.
@@ -61,6 +66,8 @@ const projectsData = [
 						<a
 							href="https://github.com/shiv-chan/WMAP/tree/main/Web%20Development%20II/Midterm%20Project"
 							alt="first-weather-app"
+							target="_blank"
+							rel="noreferrer"
 						>
 							the one
 						</a>{' '}
@@ -135,7 +142,12 @@ const projectsData = [
 				<>
 					<p>
 						This application is one of the challenges on{' '}
-						<a href="https://www.frontendmentor.io/" alt="fronend-mentor">
+						<a
+							href="https://www.frontendmentor.io/"
+							alt="fronend-mentor"
+							target="_blank"
+							rel="noreferrer"
+						>
 							Frontend Mentor
 						</a>{' '}
 						which provides the users with the overview of the application and
@@ -145,6 +157,8 @@ const projectsData = [
 						<a
 							href="https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW"
 							alt="frontend-mentor-challenge"
+							target="_blank"
+							rel="noreferrer"
 						>
 							Here
 						</a>{' '}
