@@ -11,6 +11,9 @@ import Css from './assets/icons/icons-css3.svg';
 import JavaScript from './assets/icons/icons-javascript.svg';
 import Yelp from './assets/icons/icons-yelp.svg';
 import GoogleMap from './assets/icons/icons-google-maps.svg';
+import YouTube from './assets/icons/icons-youtube.svg';
+import StyledComponents from './assets/icons/icons-styledcomponents.png';
+import MaterialUI from './assets/icons/icons-material-ui.svg';
 
 // images
 import TodoDemo from './assets/react-todo-app-demo.gif';
@@ -24,8 +27,163 @@ import PuppyTimeDetails from './assets/puppytime-details.png';
 import PuppyTimeMobile from './assets/puppytime-mobile-demo.gif';
 import BubbleTeaHuntThumbnail from './assets/bubble-tea-hunt-tn.png';
 import BubbleTeaHuntDemo from './assets/bubble-tea-hunt-demo.gif';
+import PomodoroThumbnail from './assets/go-to-pomodoro-tn.png';
+import PomodoroDetails from './assets/go-to-pomodoro-details.png';
 
 const projectsData = [
+	{
+		title: 'Go-to Pomodoro',
+		thumbnail: PomodoroThumbnail,
+		icons: [
+			['React', ReactIcon],
+			['Redux', ReduxIcon],
+			['IFrame Player API', YouTube],
+			['Styled Components', StyledComponents],
+			['Material UI', MaterialUI],
+			['Sass', SassIcon],
+		],
+		short_description:
+			'This is a customizable pomodoro timer with BGM built with React, Redux. The user is supposed to set a YouTube link as her/his own music.',
+		long_description: function () {
+			return (
+				<>
+					<p>
+						This is a customizable pomodoro timer with BGM built with React,
+						Redux.
+					</p>
+					<p>
+						The user is supposed to set a YouTube link as her/his own music. I
+						used{' '}
+						<a
+							href="https://developers.google.com/youtube/iframe_api_reference"
+							alt="iframe-api"
+							target="_blank"
+							rel="noreferrer"
+						>
+							YouTube IFrame Player API
+						</a>{' '}
+						to embed the YouTube video in this app.
+					</p>
+					<p>For styling, I used Sass, Styled Components, and Material UI.</p>
+					<img src={PomodoroDetails} alt="go-to-pomodoro" />
+					<ul style={{ marginTop: 0, marginBottom: 30 }}>
+						<li>
+							The user can either select or set time and a BGM for each session
+							respectively.
+						</li>
+						<li>
+							Custom inputs for both time and the BGM should be filled, so the
+							error messages will be shown if they are empty.
+						</li>
+						<li>
+							Time should be more than 0 sec and less than 1000 min, so the
+							error message will be shown to meet the condition.
+						</li>
+						<li>
+							The set button at the bottom of the setting page keeps disabled
+							until all time and BGMs setting is specified.
+						</li>
+					</ul>
+					<img src={PomodoroThumbnail} alt="go-to-pomodoro-tn" />
+					<ul style={{ marginTop: 0, marginBottom: 30 }}>
+						<li>
+							The user can control(start, pause, resume) the timer by clicking
+							YouTube video's play button or button(s) below the video.
+						</li>
+						<li>
+							The buttons below the video changes according to the timers
+							status.
+						</li>
+						<li>
+							There are the volume control slider and the toggle for the bell
+							that rings when each session's time is up.
+						</li>
+						<li>The colour scheme changes on each session.</li>
+					</ul>
+					<p>
+						I created this app with my very own idea and design. Also, I decided
+						to create it with an API and some new things such as{' '}
+						<code>styled-components</code> or Material UI to challenge myself.
+					</p>
+					<p>
+						First, I tried to connect to YouTube IFrame Player API following the
+						official documentation. However, the code in there are all written
+						in JavaScript.
+						<br />I couldn't figure out how to convert those codes to React, so
+						I used{' '}
+						<a
+							href="https://www.npmjs.com/package/react-youtube"
+							alt="iframe-api"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<code>react-youtube</code> package
+						</a>
+						.
+					</p>
+					<p>
+						As always, I started this process by putting the following command{' '}
+						<code>npx create-react app react-todo-app --template redux</code>
+						which is creating a redux + plain JS boilerplate.
+					</p>
+					<p>There are two parts that I mostly struggled with.</p>
+					<ol>
+						<li>
+							The timer
+							<br />I implement the timer with <code>setInterval</code> first.
+							It simply counts down time in every one second, which was not very
+							accurate.
+							<br />
+							In order to make the timer accurate as possible, I switched to use{' '}
+							<code>setTimeout</code>.<br />
+							<br />
+							Set the following three states: <code>lastUpdatedTime</code>,
+							<code>elapsedTime</code>, <code>totalTime</code>
+							<br /> In <code>setTimeout</code>, I created the callback function
+							that calculates <code>lastUpdateTime</code> which is given by{' '}
+							<code>Date.now()</code> and accumulates <code>elapsedTime</code>{' '}
+							by adding <code>Date.now() - lastUpdateTime</code> to the previous{' '}
+							<code>elapsedTime</code>. This <code>setTimeout</code> runs in 100
+							milliseconds.
+							<br />
+							<br />
+							Placed this <code>setTimeout</code> under <code>useEffect</code>{' '}
+							that has <code>lastUpdateTime</code> as a dependency. Therefore,
+							this <code>setTimeout</code> keeps running until
+							<code>clearTimeout</code> gets called. <code>lastUpdateTime</code>{' '}
+							gets updated in very short time, so this timer wont't get a time
+							lag as big as we can recognize.
+						</li>
+						<li>
+							Setting events that control YouTube video player.
+							<br />I needed to add events to the button elements to make them
+							control the YouTube video player. Since I used{' '}
+							<code>react-youtube</code> package, I couldn't implement the way
+							that the API's official documantation shows.
+							<br />
+							<br />
+							In <code>react-youtube</code>, the target YouTube video player is
+							identified with <code>e.target</code>. Set the function that gets
+							and sets <code>e.target</code> as the state with{' '}
+							<code>onReady</code> props in the <code>YouTube</code>omponent.
+						</li>
+					</ol>
+					<br />
+					<p>
+						The some components still have repetitive codes. Also, using both
+						Sass and Styled Components might be confusing. I need to rethink how
+						and when I should use Styled Components and Scss.
+					</p>
+				</>
+			);
+		},
+		isReady: true,
+		period: '1 month',
+		responsibilities: 'Design, Front-end',
+		image: PomodoroThumbnail,
+		website: 'https://go-to-pomodoro.vercel.app/',
+		source_code: 'https://github.com/shiv-chan/go-to-pomodoro',
+	},
 	{
 		title: 'Weather App',
 		thumbnail: WeatherThumbnail,
