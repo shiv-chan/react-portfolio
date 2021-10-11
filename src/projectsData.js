@@ -48,7 +48,7 @@ const projectsData = [
 			return (
 				<>
 					<p>
-						This is a customizable pomodoro timer with BGM built with React,
+						This is a customizable pomodoro timer with BGM built with React and
 						Redux.
 					</p>
 					<p>
@@ -87,12 +87,11 @@ const projectsData = [
 					<img src={PomodoroThumbnail} alt="go-to-pomodoro-tn" />
 					<ul style={{ marginTop: 0, marginBottom: 30 }}>
 						<li>
-							The user can control(start, pause, resume) the timer by clicking
+							The user can control (start, pause, resume) the timer by clicking
 							YouTube video's play button or button(s) below the video.
 						</li>
 						<li>
-							The buttons below the video changes according to the timers
-							status.
+							The buttons below the video change according to the timers status.
 						</li>
 						<li>
 							There are the volume control slider and the toggle for the bell
@@ -151,7 +150,7 @@ const projectsData = [
 							that has <code>lastUpdateTime</code> as a dependency. Therefore,
 							this <code>setTimeout</code> keeps running until
 							<code>clearTimeout</code> gets called. <code>lastUpdateTime</code>{' '}
-							gets updated in very short time, so this timer wont't get a time
+							gets updated in very short time, so this timer won't get a time
 							lag as big as we can recognize.
 						</li>
 						<li>
@@ -165,7 +164,7 @@ const projectsData = [
 							In <code>react-youtube</code>, the target YouTube video player is
 							identified with <code>e.target</code>. Set the function that gets
 							and sets <code>e.target</code> as the state with{' '}
-							<code>onReady</code> props in the <code>YouTube</code>omponent.
+							<code>onReady</code> props in the <code>YouTube</code> component.
 						</li>
 					</ol>
 					<br />
