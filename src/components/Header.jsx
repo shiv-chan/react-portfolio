@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '../assets/icons/portfolio-icon.png';
-import ResumeFile from '../assets/KahoShibuya-Frontend Dev-Resume.pdf';
+import ResumeFile from '../assets/KahoShibuya-Frontend-Resume.pdf';
 
 export default function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
