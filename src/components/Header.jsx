@@ -31,7 +31,7 @@ export default function Header() {
 						<li className="menuItem" onClick={handleClick}>
 							<a
 								href={ResumeFile}
-								download
+								download="KahoShibuya-Frontend-Resume"
 								// style={{ cursor: 'not-allowed', color: 'lightgrey' }}
 							>
 								RESUME
