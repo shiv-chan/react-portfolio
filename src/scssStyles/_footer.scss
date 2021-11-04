@@ -11,6 +11,11 @@ footer {
 		font-size: 3rem;
 		text-decoration: none;
 		color: inherit;
+		@include transitionEase;
+
+		&:hover {
+			color: $secondary-color;
+		}
 	}
 }
 
