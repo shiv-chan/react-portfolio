@@ -1,4 +1,5 @@
 import React from 'react';
+import { FiMail, FaGithub, FaLinkedin, FaDev } from 'react-icons/all';
 
 export default function Hero() {
 	return (
@@ -20,6 +21,20 @@ export default function Hero() {
 						keep doing it for fun!
 					</span>
 				</p>
+			</section>
+			<section className="social-icons">
+				<a href="mailto: kshibuya31@gmail.com">
+					<FiMail />
+				</a>
+				<a href="https://github.com/shiv-chan">
+					<FaGithub />
+				</a>
+				<a href="https://www.linkedin.com/in/kaho-shibuya">
+					<FaLinkedin />
+				</a>
+				<a href="https://dev.to/shivchan">
+					<FaDev />
+				</a>
 			</section>
 		</div>
 	);

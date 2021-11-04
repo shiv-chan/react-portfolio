@@ -39,6 +39,23 @@
 			background-color: #fff;
 		}
 	}
+
+	.social-icons {
+		padding-top: 2.5rem;
+		@include flex;
+		gap: 1.5rem;
+
+		a {
+			font-size: 3rem;
+			text-decoration: none;
+			color: $ternary-color;
+			@include transitionEase;
+
+			&:hover {
+				color: $secondary-color;
+			}
+		}
+	}
 }
 
 @include tablet {
@@ -56,6 +73,15 @@
 		section {
 			font-size: 4rem;
 			line-height: 2rem;
+		}
+
+		.social-icons {
+			padding-top: 3rem;
+			gap: 1.8rem;
+
+			a {
+				font-size: 3.5rem;
+			}
 		}
 	}
 }
@@ -77,6 +103,15 @@
 		section {
 			font-size: 5rem;
 			line-height: 3rem;
+		}
+
+		.social-icons {
+			padding-top: 4rem;
+			gap: 3rem;
+
+			a {
+				font-size: 4.5rem;
+			}
 		}
 	}
 }
