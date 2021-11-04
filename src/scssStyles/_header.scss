@@ -13,9 +13,10 @@ header {
 		display: flex;
 		align-items: center;
 		color: $secondary-color;
+		font-size: 2rem;
 		img {
-			width: 2.5rem;
-			height: 2.5rem;
+			width: 2rem;
+			height: 2rem;
 			margin-right: 0.5rem;
 		}
 	}
@@ -41,29 +42,29 @@ header {
 	&Line {
 		position: absolute;
 		right: 0rem;
-		top: 0.5rem;
-		width: 2.8rem;
-		height: 1px;
-		background-color: $font-color;
+		top: 0;
+		width: 2.5rem;
+		height: 0.5px;
+		background-color: $secondary-color;
 		@include transitionEase;
 
 		&::before {
 			content: '';
 			position: absolute;
-			top: -0.8rem;
-			width: 2.8rem;
-			height: 1px;
-			background-color: $font-color;
+			top: -0.7rem;
+			width: 2.5rem;
+			height: 0.5px;
+			background-color: $secondary-color;
 		}
 
 		&::after {
 			content: '';
 			position: absolute;
-			top: 0.8rem;
+			top: 0.7rem;
 			right: 0;
 			width: 2rem;
-			height: 1px;
-			background-color: $font-color;
+			height: 0.5px;
+			background-color: $secondary-color;
 		}
 
 		//change the lines into X
@@ -77,7 +78,7 @@ header {
 			}
 
 			&::after {
-				width: 2.8rem;
+				width: 2.5rem;
 				top: 0;
 				transform: rotate(-45deg);
 			}
@@ -131,13 +132,66 @@ header {
 	}
 }
 
+@include tablet {
+	header {
+		height: 6.5rem;
+		padding: 0 4rem;
+
+		& > a:first-of-type {
+			font-size: 2.5rem;
+			img {
+				width: 2.5rem;
+				height: 2.5rem;
+			}
+		}
+	}
+
+	.hamburger {
+		width: 3rem;
+
+		&Line {
+			top: 0.5rem;
+			right: 2rem;
+			height: 1px;
+			width: 3rem;
+
+			&::before {
+				top: -0.8rem;
+				height: 1px;
+				width: 3rem;
+			}
+
+			&::after {
+				top: 0.8rem;
+				height: 1px;
+				width: 2.5rem;
+			}
+
+			&.open {
+				&::after {
+					width: 3rem;
+				}
+			}
+		}
+	}
+}
+
 @include desktop {
 	header {
-		height: 11.5rem;
+		height: 8.5rem;
 		padding: 0 7rem;
 
-		a {
+		& > a:first-of-type {
 			font-size: 3rem;
+
+			img {
+				height: 3rem;
+				width: 3rem;
+			}
+		}
+
+		a {
+			font-size: 3.5rem;
 		}
 	}
 

@@ -43,6 +43,8 @@
 
 @include tablet {
 	.hero {
+		top: 6.5rem;
+
 		h2 {
 			font-size: 3rem;
 		}
@@ -61,7 +63,7 @@
 @include desktop {
 	.hero {
 		position: relative;
-		top: 115px;
+		top: 8.5rem;
 		padding: 10rem 15rem 23rem 15rem;
 
 		h2 {

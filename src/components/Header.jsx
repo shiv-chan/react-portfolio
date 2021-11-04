@@ -29,11 +29,7 @@ export default function Header() {
 							<Link to="/about">ABOUT</Link>
 						</li>
 						<li className="menuItem" onClick={handleClick}>
-							<a
-								href={ResumeFile}
-								download="KahoShibuya-Frontend-Resume"
-								// style={{ cursor: 'not-allowed', color: 'lightgrey' }}
-							>
+							<a href={ResumeFile} download="KahoShibuya-Frontend-Resume">
 								RESUME
 							</a>
 						</li>
