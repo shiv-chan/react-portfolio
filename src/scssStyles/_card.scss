@@ -58,11 +58,13 @@
 
 				h1 {
 					color: $secondary-color;
-					font-size: 2rem;
+					font-size: 1.8rem;
 				}
 
 				p {
-					font-size: 1.5rem;
+					font-size: 1.2rem;
+					font-family: $secondary-font;
+					line-height: 1.8rem;
 				}
 			}
 		}
@@ -90,11 +92,11 @@
 	.card-section a {
 		.card section {
 			h1 {
-				font-size: 1.8rem;
+				font-size: 1.5rem;
 			}
 
 			p {
-				font-size: 1.3rem;
+				font-size: 1.2rem;
 			}
 		}
 
@@ -117,12 +119,13 @@
 					padding: 3rem;
 
 					h1 {
-						font-size: 3rem;
+						font-size: 2.5rem;
 						margin-bottom: 1rem;
 					}
 
 					p {
 						font-size: 1.8rem;
+						line-height: 2.8rem;
 					}
 				}
 			}
@@ -150,6 +153,11 @@
 			.card {
 				section {
 					padding: 4.5rem 3rem 3rem;
+
+					p {
+						font-size: 1.5rem;
+						line-height: 2.5rem;
+					}
 				}
 			}
 		}
@@ -181,12 +189,11 @@
 					padding: 3.5rem 5rem;
 
 					h1 {
-						margin-bottom: 1rem;
-						font-size: 3rem;
+						margin-bottom: 0.5rem;
 					}
 
 					p {
-						font-size: 2rem;
+						font-size: 1.8rem;
 					}
 				}
 			}
