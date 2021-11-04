@@ -16,6 +16,7 @@ footer {
 
 @include tablet {
 	footer {
+		height: 8.5rem;
 		gap: 3.5rem;
 
 		a {
@@ -26,8 +27,8 @@ footer {
 
 @include desktop {
 	footer {
-		height: 13rem;
-		gap: 3.5rem;
+		height: 10rem;
+		gap: 4rem;
 
 		a {
 			font-size: 5rem;
