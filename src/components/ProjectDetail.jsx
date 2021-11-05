@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { projectsDataContext } from '../context';
 import { useParams } from 'react-router';
-import { BiLinkExternal, FaGithub } from 'react-icons/all';
+import { BiLinkExternal, FaGithub, FiGlobe } from 'react-icons/all';
 import { convertTitleToParams } from './Card';
 
 export default function ProjectDetail() {
@@ -14,37 +14,33 @@ export default function ProjectDetail() {
 	return (
 		<div className="project-detail">
 			<h1>{project.title}</h1>
-			<article>
-				<img src={project.image} alt={project.title} />
-				<div className="links">
-					{project.website === '' ? (
-						''
-					) : (
-						<a
-							href={project.website}
-							alt="website"
-							target="_blank"
-							rel="noreferrer"
-						>
-							<BiLinkExternal />
-							Website
-						</a>
-					)}
-					{project.source_code === '' ? (
-						''
-					) : (
-						<a
-							href={project.source_code}
-							alt="website"
-							target="_blank"
-							rel="noreferrer"
-						>
-							<FaGithub />
-							Source code
-						</a>
-					)}
-				</div>
+			<article className="external-links">
+				{project.website === '' ? (
+					''
+				) : (
+					<a
+						href={project.website}
+						alt="website"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<FiGlobe />
+					</a>
+				)}
+				{project.source_code === '' ? (
+					''
+				) : (
+					<a
+						href={project.source_code}
+						alt="github"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<FaGithub />
+					</a>
+				)}
 			</article>
+			<img src={project.image} alt={project.title} />
 			<section className="details">
 				<h2 className="details-head">Language & Tool</h2>
 				<div className="language-tool-list">

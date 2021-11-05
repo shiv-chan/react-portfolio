@@ -128,10 +128,9 @@ const projectsData = [
 					<p>There are two parts that I mostly struggled with.</p>
 					<ol>
 						<li>
-							The timer
-							<br />I implement the timer with <code>setInterval</code> first.
-							It simply counts down time in every one second, which was not very
-							accurate.
+							<b>The timer</b>I implement the timer with{' '}
+							<code>setInterval</code> first. It simply counts down time in
+							every one second, which was not very accurate.
 							<br />
 							In order to make the timer accurate as possible, I switched to use{' '}
 							<code>setTimeout</code>.<br />
@@ -154,11 +153,11 @@ const projectsData = [
 							lag as big as we can recognize.
 						</li>
 						<li>
-							Setting events that control YouTube video player.
-							<br />I needed to add events to the button elements to make them
-							control the YouTube video player. Since I used{' '}
-							<code>react-youtube</code> package, I couldn't implement the way
-							that the API's official documantation shows.
+							<b>Setting events that control YouTube video player.</b>I needed
+							to add events to the button elements to make them control the
+							YouTube video player. Since I used <code>react-youtube</code>{' '}
+							package, I couldn't implement the way that the API's official
+							documantation shows.
 							<br />
 							<br />
 							In <code>react-youtube</code>, the target YouTube video player is
