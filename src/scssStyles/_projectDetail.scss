@@ -157,8 +157,8 @@
 	}
 
 	& > img {
-		width: 500px;
-		max-width: 80vw;
+		max-width: 500px;
+		width: 80vw;
 		margin-bottom: 0.5rem;
 	}
 
@@ -192,6 +192,10 @@
 
 @include smallMobile {
 	.project-detail {
+		.details {
+			min-width: 250px;
+		}
+
 		.project-description {
 			p {
 				font-size: 1.5rem;
@@ -237,18 +241,21 @@
 	.project-detail {
 		.project-description {
 			p {
-				font-size: 2rem;
+				font-size: 1.8rem;
 			}
 
 			code,
 			pre {
-				font-size: 1.5rem;
+				font-size: 1.4rem;
 			}
 
 			ul,
 			ol {
 				li {
-					font-size: 2rem;
+					font-size: 1.8rem;
+					b {
+						font-size: 1.8rem;
+					}
 				}
 			}
 		}
@@ -284,7 +291,7 @@
 	.wip {
 		padding-top: 115px;
 		width: 800px;
-		min-height: calc(100vh - 130px);
+		min-height: calc(100vh - 8.5rem);
 
 		& > h1 {
 			font-size: 5rem;
@@ -296,19 +303,38 @@
 		padding-top: 115px;
 		width: 800px;
 
+		h1 {
+			margin-bottom: 0;
+		}
+
+		.external-links {
+			gap: 2.5rem;
+
+			a {
+				font-size: 4.5rem;
+			}
+		}
+
 		.project-description {
 			p {
-				font-size: 2.5rem;
-				margin-top: 2rem;
+				font-size: 2rem;
+				margin: 0 2rem 2.5rem;
+				line-height: 3.2rem;
 			}
 
 			code {
-				font-size: 2rem;
+				font-size: 1.5rem;
 			}
 
 			ul li,
 			ol li {
-				font-size: 2.5rem;
+				font-size: 2rem;
+				margin-bottom: 3.5rem;
+				line-height: 3.2rem;
+
+				b {
+					font-size: 2rem;
+				}
 			}
 		}
 
