@@ -13,7 +13,7 @@
 }
 
 // larger than 768px (desktop)
-@mixin desktop {
+@mixin laptop {
 	@media screen and (min-width: 1024px) {
 		@content;
 	}

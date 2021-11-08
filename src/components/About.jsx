@@ -9,12 +9,17 @@ export default function About() {
 				<img src={profilePic} alt="profile" />
 				<section>
 					<p>
-						Kaho Shibuya is a front-end web developer currently focusing on
-						React.js.
+						Kaho Shibuya is{' '}
+						<span class="highlight">a front-end web developer</span> currently
+						focusing on
+						<span class="highlight"> React</span>.
 					</p>
 					<p>
-						She is determined and passionate learner, goal-oriented,
-						well-organized, and prosocial person.
+						She is <span class="highlight">determined</span> and{' '}
+						<span class="highlight">passionate learner</span>,{' '}
+						<span class="highlight">goal-oriented</span>,
+						<span class="highlight">well-organized</span>, and{' '}
+						<span class="highlight">prosocial</span> person.
 					</p>
 					<p>
 						Also, she has been active in several tech communities.
@@ -25,9 +30,11 @@ export default function About() {
 						doing a lot of Q&As.
 					</p>
 					<p>
-						With 3+ years of experience as a digital marketer, she is interested
-						in user experience, promoting, and monetizing the service as well.
-						She believes that this makes it easier for her to collaborate with a
+						With 3+ years of experience as a digital marketer, she is intrigued
+						with <span class="highlight">user experience</span>,{' '}
+						<span class="highlight">promoting</span>, and{' '}
+						<span class="highlight">monetizing</span> the service as well. She
+						believes that this makes it easier for her to collaborate with a
 						marketing or business team.
 					</p>
 					<p>
@@ -36,9 +43,13 @@ export default function About() {
 						consequences of what she does.
 						<br />
 						She needs to focus on her tasks on her own sometimes, however, she’s
-						always open to discuss or share her thoughts, opinions or even her
-						failures. She’s comfortable with being the first penguin. Also, she
-						would appreciate it if she can get honest feedback making her grow.
+						always{' '}
+						<span class="highlight">
+							open to discuss or share her thoughts, opinions or even her
+							failures.
+						</span>{' '}
+						She’s comfortable with being the first penguin. Also, she would
+						appreciate it if she can get honest feedback making her grow.
 					</p>
 					<p>
 						Growing as a web developer is a never ending journey and she'd love
@@ -48,8 +59,11 @@ export default function About() {
 				<section>
 					<h2>Skills/Interest</h2>
 					<p>
-						JavaScript, React, Redux, Node.js, HTML, CSS, Sass, Bootstrap,
-						Webpack/Babel, StyledComponents, Git, GitHub, PHP, SQL, mySQL, Big
+						<span class="highlighted-lang">JavaScript</span>,{' '}
+						<span class="highlighted-lang">React</span>,{' '}
+						<span class="highlighted-lang">Redux</span>, Next.js, Angular, Node,
+						Express, MongoDB, Mongoose, HTML/CSS, SASS, Bootstrap,
+						Webpack/Babel, StyledComponents, Git, GitHub, PHP, SQL, MySQL, Big
 						Query, Google App Script, Google Analytics, Google Tag Manager
 					</p>
 					<h2>Personality traits</h2>

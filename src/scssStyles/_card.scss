@@ -146,7 +146,7 @@
 	}
 }
 
-@include desktop {
+@include laptop {
 	.card-section {
 		grid-template-columns: 40vw 40vw;
 		grid-auto-rows: 45vw;

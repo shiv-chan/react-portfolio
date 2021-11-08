@@ -30,7 +30,7 @@ footer {
 	}
 }
 
-@include desktop {
+@include laptop {
 	footer {
 		height: 10rem;
 		gap: 4rem;
