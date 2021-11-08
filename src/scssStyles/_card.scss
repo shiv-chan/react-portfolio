@@ -55,6 +55,7 @@
 				align-items: flex-start;
 				gap: 0.5rem;
 				padding: 3rem 2rem;
+				z-index: 10;
 
 				h1 {
 					color: $secondary-color;
@@ -113,6 +114,7 @@
 	.card-section {
 		grid-template-columns: 65vw;
 		grid-auto-rows: 65vw;
+		margin-top: 2rem;
 		a {
 			.card {
 				section {
@@ -166,24 +168,28 @@
 
 @include bigscreen {
 	.card-section {
-		grid-auto-rows: 40vw;
-		gap: 8rem;
+		grid-template-columns: 35vw 35vw;
+		grid-auto-rows: 35vw;
+		gap: 10rem;
 
 		a {
 			.lang-icons {
 				top: 65%;
 				gap: 2.5rem;
-				margin-right: 2.5rem;
+				margin-right: 3rem;
 
 				.icon img {
-					width: 8rem;
-					height: 8rem;
+					width: 6.5rem;
+					height: 6.5rem;
 					padding: 1.5rem;
 				}
 			}
 
 			.card {
 				grid-template-rows: 70% 30%;
+				.thumbnail {
+					object-fit: fill;
+				}
 
 				section {
 					padding: 3.5rem 5rem;

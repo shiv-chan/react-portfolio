@@ -12,9 +12,7 @@ export default function Hero() {
 			</h1>
 			<section>
 				<p>
-					<span>
-						I am an aspiring frontend developer and a passionate learner.
-					</span>
+					<span>I am a frontend developer and a passionate learner.</span>
 					<br />
 					<span>
 						Growing as a web developer is a never ending journey and I'd like to
