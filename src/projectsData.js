@@ -14,6 +14,12 @@ import GoogleMap from './assets/icons/icons-google-maps.svg';
 import YouTube from './assets/icons/icons-youtube.svg';
 import StyledComponents from './assets/icons/icons-styledcomponents.png';
 import MaterialUI from './assets/icons/icons-material-ui.svg';
+import Node from './assets/icons/icons-node-js.svg';
+import Mongo from './assets/icons/icons-mongodb.svg';
+import TypeScript from './assets/icons/icons-typescript.svg';
+import JWT from './assets/icons/icons-json-web-token.svg';
+import Tailwind from './assets/icons/icons-tailwind.svg';
+import Cloudinary from './assets/icons/icons-cloudinary.png';
 
 // images
 import TodoDemo from './assets/react-todo-app-demo.gif';
@@ -29,8 +35,128 @@ import BubbleTeaHuntThumbnail from './assets/bubble-tea-hunt-tn.png';
 import BubbleTeaHuntDemo from './assets/bubble-tea-hunt-demo.gif';
 import PomodoroThumbnail from './assets/go-to-pomodoro-tn.png';
 import PomodoroDetails from './assets/go-to-pomodoro-details.png';
+import SenpaiKohaiThumbnail from './assets/senpai-kohai-tn.png';
+import SenpaiKohaiDetails from './assets/senpai-kohai-details.png';
 
 const projectsData = [
+	{
+		title: 'Senpai Kohai',
+		thumbnail: SenpaiKohaiThumbnail,
+		icons: [
+			['React', ReactIcon],
+			['Node, Express', Node],
+			['TypeScript', TypeScript],
+			['Redux', ReduxIcon],
+			['Tailwind CSS', Tailwind],
+			['MongoDB, Mongoose', Mongo],
+			['JWT', JWT],
+			['Cloudinary', Cloudinary],
+		],
+		short_description: 'A matching platform for people in tech.',
+		long_description: function () {
+			return (
+				<>
+					<p>This is a matching platform for people in tech.</p>
+					<p>
+						Senpai(先輩) and Kohai(後輩) are Japanese words meaning "Senior" and
+						"Junior" respectively. You can offer help or support others as
+						senpai, and you can find support as kohai through this app.
+					</p>
+					<p>
+						This is a full-stack application build with React, Redux,
+						TypeScript, Tailwind CSS for a client side and Node, Express,
+						MongoDB, Mongoose, JWT for a server side.
+					</p>
+					<img src={SenpaiKohaiDetails} alt="senpai-kohai" />
+					<ul style={{ marginTop: 0, marginBottom: 30 }}>
+						<li>
+							The user has to sign up and log in to join. Otherwise, it brings
+							the user back to the log-in page.
+						</li>
+						<li>
+							When the user forgets the password, he/she can enter the email
+							address on the forgot-password page. It emails the user the link
+							leads the user to re-set the password.
+						</li>
+						<li>
+							The browsing page shows all users' profile card but the log-in
+							user's. The user can see the detailed profile by clicking each
+							card. The user can copy the contact by clicking the button at the
+							bottom if it's provided.
+						</li>
+						<li>
+							There are two "my profile" pages. The user can edit his/her own
+							profile as either Senpai or Kohai.
+						</li>
+					</ul>
+					<p>This is a team project.</p>
+					<p>
+						Of all the parts that I worked on, these are main things that I
+						mostly struggled with.
+					</p>
+					<ol>
+						<li>
+							<b>Handling a Token and Cookie</b>When generating a token with
+							JWT, we stores it to Cookie.
+							<br />
+							With <code>httpOnly:true</code> in Cookie's config, values inside
+							Cookie cannot be manipulate in a client side. We decided to do
+							this because it could be more secure.
+							<br />
+							Therefore, we always have to handle a token inside Cookie by
+							communicating with a server side.
+							<br />
+							Since the client side and the server side uses different domain
+							(ports in development), it has to clear all CORS errors.
+							<br />
+							In order to do that, the client side has to set{' '}
+							<code>Access-Control-Allow-Credentials</code>. In our case, we use
+							axios so we set <code>withCredentials: true</code> for this.
+							<br />
+							The server side has to set{' '}
+							<code>Access-Control-Allow-Credentials</code> and{' '}
+							<code>Access-Control-Allow-Origin</code> in the headers. It also
+							has to set <code>sameSite: 'None'</code> in Cookie's option.
+						</li>
+						<li>
+							<b>Authentication Controls</b>We needed to restrict the page
+							access depends on the user's log-in/log-out status.
+							<br />
+							We separated all paged into two; protected pages and non-protected
+							pages. When setting up the router, wrap those protected pages'
+							routes with <code>RequireAuth</code> component.
+							<br /> Inside <code>RequireAuth</code> component, it'll check if
+							the user has a valid token or not (checking if the user login or
+							not) and renders the targeted page according to the result.
+						</li>
+						<li>
+							<b>Cloudinary Updating, Deleting & Dealing with a Time Lag</b>
+							Since we use a free Cloudinary plan, it's better to save up the
+							space in the storage for uploading images.
+							<br />
+							However, it took a time to figure out how to do it. I ended up
+							implementing the following way.
+							<br />
+							It stores the image ID from Cloudinary to database when the user
+							uploading the profile image. Then, next time the user replaces the
+							profile image, it sends the request to destroy the previous image
+							on Cloudinary with the ID and upload the new one.
+							<br />
+							<br />
+							Also, communicating with Cloudinary might take a while so set the
+							loading overlay until it completes from UX perspective.
+						</li>
+					</ol>
+				</>
+			);
+		},
+		isReady: true,
+		period: '1 month',
+		responsibilities: 'Design, Front-end, Backend, Lead',
+		image: SenpaiKohaiThumbnail,
+		website: 'https://senpai-kohai.herokuapp.com/',
+		source_code: 'https://github.com/shiv-chan/senpai-kohai',
+	},
 	{
 		title: 'Go-to Pomodoro',
 		thumbnail: PomodoroThumbnail,
