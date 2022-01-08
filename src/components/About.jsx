@@ -43,7 +43,6 @@ export default function About() {
 	}, [isTablet, isLaptop, isBigScreen]);
 
 	window.addEventListener('scroll', function () {
-		console.log(window.scrollY);
 		setYOffSet((prevState) => {
 			if (prevState > this.scrollY) return prevState;
 			return this.scrollY;
