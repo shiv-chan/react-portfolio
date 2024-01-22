@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import { projectsDataContext } from '../context';
 import { useParams } from 'react-router';
-import { FaGithub, FiGlobe } from 'react-icons/all';
+import { FaGithub } from "react-icons/fa";
+import { FiGlobe } from "react-icons/fi";
 import { convertTitleToParams } from './Card';
 
 export default function ProjectDetail() {

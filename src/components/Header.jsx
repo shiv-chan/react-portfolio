@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '../assets/icons/portfolio-icon.png';
-import ResumeFile from '../assets/KahoShibuya-Resume.pdf';
 
 export default function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,11 +26,6 @@ export default function Header() {
 						</li>
 						<li className="menuItem" onClick={handleClick}>
 							<Link to="/about">ABOUT</Link>
-						</li>
-						<li className="menuItem" onClick={handleClick}>
-							<a href={ResumeFile} download="KahoShibuya-Resume">
-								RESUME
-							</a>
 						</li>
 					</ul>
 				</nav>

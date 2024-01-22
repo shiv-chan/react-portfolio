@@ -1,5 +1,6 @@
 import React from 'react';
-import { FiMail, FaGithub, FaLinkedin, FaDev } from 'react-icons/all';
+import { FaGithub, FaLinkedin, FaDev } from 'react-icons/fa';
+import { FiMail } from 'react-icons/fi';
 
 export default function Hero() {
 	return (
