@@ -57,5 +57,6 @@ jobs:
         env:
           GOOGLE_APPLICATION_CREDENTIALS: google-application-credentials.json
       - name: Remove credentials file
-              run: |
-                rm google-application-credentials.json
+        if: ${{ success() || failure() }}
+        run: |
+          rm google-application-credentials.json
