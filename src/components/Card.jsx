@@ -1,5 +1,5 @@
 import React from 'react';
-import { BsImage } from 'react-icons/all';
+import { BsImage } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
 export function convertTitleToParams(title) {
